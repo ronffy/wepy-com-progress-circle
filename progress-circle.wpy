@@ -59,7 +59,7 @@ export default class ProgressCircle extends wepy.component {
   props = {
     // 百分比
     percent: {
-      type: Number,
+      type: [Number, String],
       default: 0
     },
     // 是否显示进度数值
@@ -69,12 +69,12 @@ export default class ProgressCircle extends wepy.component {
     },
     // 进度条线的宽度，单位 px
     strokeWidth: {
-      type: Number,
+      type: [Number, String],
       default: 5
     },
     // 圆形宽度
     width: {
-      type: Number,
+      type: [Number, String],
       default: 200
     },
     // 进度条颜色
@@ -89,7 +89,7 @@ export default class ProgressCircle extends wepy.component {
     },
     // 进度数值字体大小
     fontSize: {
-      type: Number,
+      type: [Number, String],
       default: 16,
     }
   };
