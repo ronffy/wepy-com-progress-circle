@@ -1,0 +1,97 @@
+<style type="less">
+.circle {
+  position: relative;
+  border-radius: 50%;
+}
+.clip_left,
+.clip_right {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.circle_left,
+.circle_right {
+  position: absolute;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+}
+.mask {
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  text-align: center;
+  font-size: 16px;
+}
+</style>
+<template>
+  <!--背景圆-->
+  <view class="circle" style="background: {{color}}; width: {{width}}px; height: {{width}}px;">
+    <!--左半边圆-->
+    <view class="circle_left" 
+      style="background: {{bgColor}}; width: {{width}}px; height: {{width}}px; transform: rotate({{percent > 50 ? (percent - 50) * 3.6 : 0}}deg); clip: rect(0, {{width / 2}}px, auto, 0);"
+    >
+      <view class="clip_left" style="width: {{width}}px; height: {{width}}px; clip: rect(0, {{width / 2}}px, auto, 0);"></view>
+    </view>
+    <!--右半边圆-->
+    <view class="circle_right" 
+      style="background: {{percent > 50 ? color : bgColor}}; width: {{width}}px; height: {{width}}px; transform: rotate({{percent > 50 ? 0 : percent * 3.6}}deg); clip: rect(0, auto, auto, {{width / 2}}px);"
+    >
+      <view class="clip_right" style="width: {{width}}px; height: {{width}}px; clip: rect(0, auto, auto, {{width / 2}}px);"></view>
+    </view>
+    <view class="mask" 
+      style="width: {{width - 2 * strokeWidth}}px; height: {{width - 2 * strokeWidth}}px; line-height: {{width - 2 * strokeWidth}}px; left: {{strokeWidth}}px; top: {{strokeWidth}}px; font-size: {{fontSize}}px;"
+    >
+      <view wx:if="{{showInfo}}" >
+        <text>{{percent}}</text>%
+      </view>
+    </view>
+  </view>
+</template>
+<script>
+/**
+ * 圆形进度条
+ * @author hironi
+ */
+import wepy from 'wepy';
+
+export default class ProgressCircle extends wepy.component {
+  props = {
+    // 百分比
+    percent: {
+      type: Number,
+      default: 0
+    },
+    // 是否显示进度数值
+    showInfo: {
+      type: Boolean,
+      default: true
+    },
+    // 进度条线的宽度，单位 px
+    strokeWidth: {
+      type: Number,
+      default: 5
+    },
+    // 圆形宽度
+    width: {
+      type: Number,
+      default: 200
+    },
+    // 进度条颜色
+    color: {
+      type: String,
+      default: '#1890ff'
+    },
+    // 进度条背色颜色
+    bgColor: {
+      type: String,
+      default: '#eee'
+    },
+    // 进度数值字体大小
+    fontSize: {
+      type: Number,
+      default: 16,
+    }
+  };
+}
+</script>
