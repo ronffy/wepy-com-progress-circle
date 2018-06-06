@@ -40,11 +40,28 @@ npm install wepy-com-progress-circle --save
 
 ## API说明
 
-属性名             类型          默认值        说明
-percent           Float        0            百分比0~100
-width             Number       100          圆的宽度
-showInfo	        Boolean	     true	        在进度条右侧显示百分比
-strokeWidth	      Number	     6	          进度条线的宽度，单位px
-color	            Color        #09BB07	    进度条颜色
-backgroundColor	  Color		     #eee         进度条背色颜色
-
+<table>
+    <thead>
+        <tr>
+            <th>属性名</th><th>类型</th><th>默认值</th><th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>width</td><td>Number</td><td>100</td><td>圆的宽度</td>
+        </tr>
+        <tr>
+            <td>showInfo</td><td>Boolean</td><td>true</td><td>在进度条右侧显示百分比</td>
+        </tr>
+        <tr>
+            <td>strokeWidth</td><td>Number</td><td>6</td><td>进度条线的宽度，单位px</td>
+        </tr>
+        <tr>
+            <td>color</td><td>Color</td><td>#09BB07</td><td>进度条颜色</td>
+        </tr>
+        <tr>
+            <td>backgroundColor</td><td>Color</td><td>#eee</td><td>进度条背色颜色</td>
+        </tr>
+    </tbody>
+</talbe>
+                                                 	             
