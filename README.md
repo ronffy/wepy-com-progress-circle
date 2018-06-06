@@ -38,6 +38,37 @@ npm install wepy-com-progress-circle --save
 </script>
 ```
 
+### 如何设置从 0% - 100% 的动画
+
+```javascript
+// index.wpy
+<template>
+    <progressCircle :percent="percent" width="120" />
+</template>
+<script>
+    import wepy from 'wepy';
+    import ProgressCircle from 'wepy-com-progress-circle';
+
+    export default class Index extends wepy.page {
+        components = {
+            progresscircle: ProgressCircle
+        };
+        data = {
+          percent: 0, 
+        };
+        onLoad(){
+            let s = setInterval(() => {
+                this.percent = this.percent + 1;
+                this.$invoke('progresscircle', 'upPercent', this.percent)
+                if (this.percent > 99) {
+                    clearInterval(s);
+                }
+            }, 1000);
+        }
+    }
+</script>
+```
+
 ## API说明
 
 ### 属性介绍
