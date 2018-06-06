@@ -1,6 +1,6 @@
 {
   "name": "wepy-com-progress-circle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "wepy的第三方组件：圆形进度条",
   "main": "progress-circle.wpy",
   "scripts": {

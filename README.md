@@ -40,6 +40,7 @@ npm install wepy-com-progress-circle --save
 
 ## API说明
 
+### 属性介绍
 <table>
     <thead>
         <tr>
@@ -48,10 +49,13 @@ npm install wepy-com-progress-circle --save
     </thead>
     <tbody>
         <tr>
+            <td>percent</td><td>Float</td><td>0</td><td>百分比0~100</td>
+        </tr>
+        <tr>
             <td>width</td><td>Number</td><td>100</td><td>圆的宽度</td>
         </tr>
         <tr>
-            <td>showInfo</td><td>Boolean</td><td>true</td><td>在进度条右侧显示百分比</td>
+            <td>showInfo</td><td>Boolean</td><td>true</td><td>是否显示百分比</td>
         </tr>
         <tr>
             <td>strokeWidth</td><td>Number</td><td>6</td><td>进度条线的宽度，单位px</td>
@@ -64,4 +68,8 @@ npm install wepy-com-progress-circle --save
         </tr>
     </tbody>
 </talbe>
+
+### 方法介绍
+
+-   upPercent 根据传的参数值设置百分比
                                                  	             

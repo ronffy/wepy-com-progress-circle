@@ -93,5 +93,12 @@ export default class ProgressCircle extends wepy.component {
       default: 16,
     }
   };
+  methods = {
+    // 用来改变百分比的事件方法
+    upPercent(value){
+      this.percent = value || this.percent;
+      this.$apply();
+    }
+  }
 }
 </script>
