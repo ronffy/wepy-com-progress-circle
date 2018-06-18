@@ -1,5 +1,6 @@
 
 # 微信小程序wepy的第三方组件：圆形进度条
+[![npm](https://img.shields.io/npm/v/wepy-com-progress-circle.svg)](https://www.npmjs.com/package/wepy-com-progress-circle)
 
 ![](http://oxk008h6r.bkt.clouddn.com/demo.png)
 
