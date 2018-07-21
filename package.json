@@ -15,10 +15,10 @@
     "wepy-com",
     "weapp"
   ],
-  "author": "hironi",
+  "author": "ronffy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hironi/wepy-com-progress-circle/issues"
+    "url": "https://github.com/ronffy/wepy-com-progress-circle/issues"
   },
-  "homepage": "https://github.com/hironi/wepy-com-progress-circle#readme"
+  "homepage": "https://github.com/ronffy/wepy-com-progress-circle#readme"
 }
